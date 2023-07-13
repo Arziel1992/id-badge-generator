@@ -59,7 +59,7 @@ def generate_card(data, p_run, card, x):
     svg2png(url="temp/temp.svg", write_to="temp/temp.png")
 
     # import temp png and paste onto card as a mask to avoid transparency overwriting the card
-    temp = Image.open(f"temp/temp.png").resize((110, 110), Image.ANTIALIAS)
+    temp = Image.open("temp/temp.png").resize((110, 110), Image.ANTIALIAS)
     clear.paste(temp, (265, 475), temp)
 
     # TO-DO find a method to create the svg and paste/draw it directly, avoiding conversions and saving/re-saving entirely
